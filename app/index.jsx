@@ -17,7 +17,7 @@ const Home = () => {
         <Text>Прив</Text>
       </View> */}
 
-      <Link href="/about" style={styles.link}>About Page</Link>
+      <Link href="/about" style={styles.link}>О сайте</Link>
       <Link href="/contact" style={styles.link}>Контакты</Link>
     </View>
   )
