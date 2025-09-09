@@ -3,7 +3,7 @@ export const Colors = {
     warning: "#cc475a",
 
     dark: {
-        text: "#d4d4d4d",
+        text: "#d4d4d4",
         title: "#fff",
         background: "#252231",
         navBackground: "#201e2b",

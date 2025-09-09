@@ -1,25 +1,31 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
 import { Link } from 'expo-router'
 
-import Logo from '../assets/img/logo.png'
+import ThemedView from '../components/ThemedView'
+import ThemedLogo from '../components/ThemedLogo'
+import Spacer from '../components/Spacer'
+import ThemedText from '../components/ThemedText'
 
 const Home = () => {
   return (
-    <View style={styles.container}>
+    <ThemedView style={styles.container}>
 
-      <Image source={Logo} style={styles.img} />
+      {/* <ThemedLogo /> */}
+      <Spacer height={20} />
 
-      <Text style={styles.title}>ДонНТУ</Text>
+      <ThemedText style={styles.title} title={true}>ДонНТУ</ThemedText>
 
-      <Text style={{ marginTop: 10, marginBottom: 30 }}>Типа приложение</Text>
+      <Spacer height={10}/>
+      <ThemedText>Типа приложение</ThemedText>
+      <Spacer />
 
-      {/* <View style={styles.card}>
-        <Text>Прив</Text>
-      </View> */}
-
-      <Link href="/about" style={styles.link}>О сайте</Link>
-      <Link href="/contact" style={styles.link}>Контакты</Link>
-    </View>
+      <Link href="/about" style={styles.link}>
+        <ThemedText>О нас</ThemedText>
+      </Link>
+      <Link href="/contact" style={styles.link}>
+        <ThemedText>Контакты</ThemedText>
+      </Link>
+    </ThemedView>
   )
 }
 
@@ -35,12 +41,6 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: 'bold',
     fontSize: 18
-  },
-
-  img: {
-    height: 100,
-    width: 70,
-    marginVertical: 20,
   },
 
   link: {
