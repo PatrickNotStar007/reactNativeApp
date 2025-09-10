@@ -19,6 +19,12 @@ const Home = () => {
       <ThemedText>Типа приложение</ThemedText>
       <Spacer />
 
+      <Link href="/login" style={styles.link}>
+        <ThemedText>Войти в аккаунт</ThemedText>
+      </Link>
+      <Link href="/register" style={styles.link}>
+        <ThemedText>Зарегистрироваться</ThemedText>
+      </Link>
       <Link href="/about" style={styles.link}>
         <ThemedText>О нас</ThemedText>
       </Link>
