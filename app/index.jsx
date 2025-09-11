@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <ThemedView style={styles.container}>
 
-      {/* <ThemedLogo /> */}
+      <ThemedLogo />
       <Spacer height={20} />
 
       <ThemedText style={styles.title} title={true}>ДонНТУ</ThemedText>

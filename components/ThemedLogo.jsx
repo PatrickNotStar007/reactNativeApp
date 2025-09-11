@@ -8,7 +8,7 @@ const ThemedLogo = ({...props}) => {
     const logo = colorScheme === "light" ? LightLogo : DarkLogo 
 
     return (
-        <Image source={logo} {...props}/>
+        <Image source={logo} {...props} style={{height: 150, width: 120}}/>
   )
 }
 
