@@ -25,11 +25,8 @@ const Home = () => {
       <Link href="/register" style={styles.link}>
         <ThemedText>Зарегистрироваться</ThemedText>
       </Link>
-      <Link href="/about" style={styles.link}>
-        <ThemedText>О нас</ThemedText>
-      </Link>
-      <Link href="/contact" style={styles.link}>
-        <ThemedText>Контакты</ThemedText>
+      <Link href="/profile" style={styles.link}>
+        <ThemedText>Профиль</ThemedText>
       </Link>
     </ThemedView>
   )

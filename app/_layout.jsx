@@ -14,11 +14,9 @@ return (
       headerStyle: {backgroundColor: theme.background},
       headerTintColor: theme.title
     }}>
-        <Stack.Screen name="(auth)" options={{headerShown: false}}/>
-
+        {/* <Stack.Screen name="(auth)" options={{headerShown: false}}/> */}
+        <Stack.Screen name="(dashboard)" options={{headerShown: false}}/>
         <Stack.Screen name="index" options={{title: "Главная"}}/>
-        <Stack.Screen name="about" options={{title: "О сайте"}}/>
-        <Stack.Screen name="contact" options={{title: "Контакты"}}/>
     </Stack>
   </>
 )
