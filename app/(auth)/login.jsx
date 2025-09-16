@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
 import { Link } from 'expo-router'
 
 import ThemedView from '../../components/ThemedView'
@@ -6,11 +6,15 @@ import ThemedText from '../../components/ThemedText'
 import Spacer from '../../components/Spacer'
 import { Colors } from '../../constants/Colors'
 import ThemedButton from '../../components/ThemedButton'
+import ThemedTextInput from '../../components/ThemedTextInput'
+import { useState } from 'react'
 
 const Login = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     const handleSubmit = () => {
-        console.log("форма отправлена");
+        console.log("форма отправлена", email, password);
     }
 
     return (
@@ -19,6 +23,22 @@ const Login = () => {
             <ThemedText title={true} style={styles.title}>
                 Вход в аккаунт
             </ThemedText>
+
+            <ThemedTextInput
+                style={{width: '80%', marginBottom: 20}}
+                placeholder='Email'
+                keyboardType="email-address"
+                onChangeText={setEmail}
+                value={email}
+            />
+
+            <ThemedTextInput
+                style={{width: '80%', marginBottom: 20}}
+                placeholder='Password'
+                onChangeText={setPassword}
+                value={password}
+                secureTextEntry
+            />
 
             <ThemedButton onPress={handleSubmit}>
                 <Text style={{color: "#f2f2f2"}}>Войти</Text>
