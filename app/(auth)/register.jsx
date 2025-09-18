@@ -12,8 +12,15 @@ const Register = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleSubmit = () => {
-        console.log("форма отправлена", email, password);
+    const {user, register} = useState("")
+
+    const handleSubmit = async () => {
+        try {
+            await register(email, password)          
+        } catch(error) {
+
+        }
+        // console.log("форма отправлена", email, password);
     }
 
   return (
